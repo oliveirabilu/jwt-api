@@ -7,6 +7,8 @@ import com.carlos.jwtapi.repository.UsuarioRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UsuarioService {
     private final UsuarioRepository usuarioRepository;
@@ -18,6 +20,9 @@ public class UsuarioService {
     public Usuario cadastrarUsuario (Usuario usuario){
 
         return usuarioRepository.save(usuario);
+    }
+    public List listarUsuarios(){
+        return usuarioRepository.findAll();
     }
 
 }
