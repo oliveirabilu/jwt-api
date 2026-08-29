@@ -18,7 +18,8 @@ public class UsuarioController {
     }
     @PostMapping
     public Usuario cadastrar(@RequestBody @Valid Usuario usuario){
-              return usuarioService.cadastrarUsuario(usuario);
+
+        return usuarioService.cadastrarUsuario(usuario);
     }
     @GetMapping
     public List listar(){
