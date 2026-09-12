@@ -14,15 +14,25 @@ public class UsuarioController {
     private final UsuarioService usuarioService;
 
     public UsuarioController(UsuarioService usuarioService) {
+
         this.usuarioService = usuarioService;
     }
+
     @PostMapping
-    public Usuario cadastrar(@RequestBody @Valid Usuario usuario){
+    public Usuario cadastrar(@RequestBody @Valid Usuario usuario) {
 
         return usuarioService.cadastrarUsuario(usuario);
     }
+
     @GetMapping
-    public List listar(){
+    public List listar() {
+
         return usuarioService.listarUsuarios();
     }
+
+    @GetMapping("/teste")
+    public String testar() {
+        return "Acesso Autorizado";
+    }
 }
+
