@@ -60,7 +60,7 @@ src/main/java/com/carlos/jwtapi/
 Clone o repositório:
 
 ```bash
-git clone https://github.com/oliveirabilu/jwr-api.git
+git clone https://github.com/oliveirabilu/jwt-api.git
 ```
 Entre na pasta do projeto:
 
